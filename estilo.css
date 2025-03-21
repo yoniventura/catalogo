@@ -1,0 +1,125 @@
+/* ==================== GENERAL ==================== */
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* ==================== CATÁLOGO ==================== */
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+}
+
+.maquinaria {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    flex: 0 0 300px;
+}
+
+.maquinaria img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #4CAF50;
+    max-height: 200px;
+    object-fit: contain; /* Mantiene el tamaño original de las imágenes */
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+p, li {
+    margin: 5px 0;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 4px 8px; /* Botones aún más pequeños */
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ==================== DETALLES & GALERÍA ==================== */
+.detalles, .galeria {
+    background-color: #f0f0f0;
+    border-top: 2px solid #4CAF50;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+    display: none; /* Oculta por defecto */
+}
+
+.detalles:not(.oculto), .galeria:not(.oculto) {
+    display: block;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
