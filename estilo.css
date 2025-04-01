@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 40px;
+    width: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: #28a745;
+}
+
+header .btn-adquirir {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+header .btn-adquirir:hover {
+    background-color: #218838;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header .logo img {
+        max-height: 30px;
+    }
+
+    header .btn-adquirir {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Catalogo Section */
+.catalogo {
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ==================== CATÁLOGO ==================== */
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en dispositivos pequeños */
+    gap: 15px;
+    padding: 20px;
+}
+
+.maquinaria {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    flex: 1 1 300px; /* Hace que los elementos se acomoden automáticamente */
+    max-width: 100%;
+}
+
+.maquinaria img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #4CAF50;
+    max-height: 200px;
+    object-fit: contain; /* Mantiene el tamaño original de las imágenes */
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+p, li {
+    margin: 5px 0;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ==================== DETALLES & GALERÍA ==================== */
+.detalles, .galeria {
+    background-color: #f0f0f0;
+    border-top: 2px solid #4CAF50;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+    display: none; /* Oculta por defecto */
+}
+
+.detalles:not(.oculto), .galeria:not(.oculto) {
+    display: block;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* ==================== Mejoras para dispositivos pequeños ==================== */
+@media (max-width: 576px) {
+    .catalogo {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .maquinaria {
+        flex: 1 1 100%; /* Hace que cada maquinaria ocupe el 100% del ancho disponible en pantallas pequeñas */
+        margin-bottom: 15px;
+    }
+
+    .maquinaria img {
+        max-height: 180px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
