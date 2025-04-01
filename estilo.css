@@ -1,0 +1,172 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del logo */
+.logo img {
+    width: 180px; /* Tamaño más grande */
+    height: auto;
+}
+
+/* Estilo de la navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #008000;
+    border-radius: 5px;
+}
+
+/* Botones especiales */
+.btn-adquirir {
+    background-color: #008000;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.btn-adquirir:hover {
+    background-color: #006400;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 200px; /* Aumentar en móviles */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}/* ==================== CATÁLOGO ==================== */
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+}
+
+.maquinaria {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    flex: 0 0 300px;
+}
+
+.maquinaria img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #4CAF50;
+    max-height: 200px;
+    object-fit: contain; /* Mantiene el tamaño original de las imágenes */
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+p, li {
+    margin: 5px 0;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 4px 8px; /* Botones aún más pequeños */
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* ==================== DETALLES & GALERÍA ==================== */
+.detalles, .galeria {
+    background-color: #f0f0f0;
+    border-top: 2px solid #4CAF50;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+    display: none; /* Oculta por defecto */
+}
+
+.detalles:not(.oculto), .galeria:not(.oculto) {
+    display: block;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
