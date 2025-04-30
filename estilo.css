@@ -1,0 +1,205 @@
+/* ============ REINICIO GENERAL ============ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+  }
+  
+  /* ============ HEADER ============ */
+  header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header .logo img {
+    max-width: 160px;
+    border-radius: 10px;
+  }
+  
+  /* ============ NAV ============ */
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  nav ul li a {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #3fa042;
+    transform: scale(1.05);
+  }
+  /* ========== NAVEGACIÓN EN CELULAR - FILAS DE A DOS ========== */
+@media (max-width: 600px) {
+    nav ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      gap: 10px;
+      padding: 0 10px;
+    }
+  
+    nav ul li {
+      width: 100%;
+    }
+  
+    nav ul li a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ============ CATÁLOGO MAQUINARIAS ============ */
+  .catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* ============ TARJETA MAQUINARIA ============ */
+  .maquinaria {
+    background-color: white;
+    border: 2px solid #ffe600;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .maquinaria:hover {
+    transform: translateY(-5px);
+  }
+  
+  .maquinaria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  
+  /* ============ TEXTOS MAQUINARIA ============ */
+  .maquinaria h2 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffe600;
+    padding-bottom: 6px;
+  }
+  
+  .maquinaria p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  
+  .maquinaria ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .maquinaria ul li {
+    font-size: 0.9rem;
+  }
+  
+  
+  /* ============ BOTONES ============ */
+  button,
+  .btn-adquirir {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin: 6px 6px 0 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover,
+  .btn-adquirir:hover {
+    background-color: #3e9641;
+    transform: scale(1.05);
+  }
+  
+  /* ============ DETALLES Y GALERÍA ============ */
+  .detalles,
+  .galeria {
+    margin-top: 12px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+  }
+  
+  .detalles:not(.oculto),
+  .galeria:not(.oculto) {
+    display: block;
+  }
+  
+  .galeria img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    transition: transform 0.2s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* ============ FOOTER ============ */
+  footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+    font-size: 0.95rem;
+  }
+  
+  /* ============ RESPONSIVO ============ */
+  /* ¡Se mantiene en grid incluso en móvil! */
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .maquinaria h2 {
+      font-size: 1.2rem;
+    }
+  
+    button,
+    .btn-adquirir {
+      font-size: 0.85rem;
+      padding: 10px 16px;
+    }
+  }
